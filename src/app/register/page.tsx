@@ -19,10 +19,9 @@ const RegisterPage = () => {
   } = useForm<UserData>();
 
   const onSubmit = async (data: UserData) => {
-    // console.log(data);
-    const res = await registerUser(data);
-    console.log(res);
     try {
+      const res = await registerUser(data);
+      console.log(res);
     } catch (err: any) {
       console.error(err.message);
       throw new Error(err.message);
