@@ -1,5 +1,6 @@
 "use client";
 
+import { registerUser } from "@/utils/actions/registerUser";
 import Image from "next/image";
 import Link from "next/link";
 import { useForm } from "react-hook-form";
@@ -18,8 +19,9 @@ const RegisterPage = () => {
   } = useForm<UserData>();
 
   const onSubmit = async (data: UserData) => {
-    console.log(data);
-
+    // console.log(data);
+    const res = await registerUser(data);
+    console.log(res);
     try {
     } catch (err: any) {
       console.error(err.message);
