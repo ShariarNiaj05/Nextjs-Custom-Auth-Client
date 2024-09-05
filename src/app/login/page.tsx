@@ -86,7 +86,14 @@ const LoginPage = () => {
                 alt="google logo"
               />
             </button>
-            <button className="btn btn-circle" onClick={() => signIn()}>
+            <button
+              className="btn btn-circle"
+              onClick={() =>
+                signIn("github", {
+                  callbackUrl: "http://localhost:3000",
+                })
+              }
+            >
               <Image
                 src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
                 width={35}
