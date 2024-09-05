@@ -1,6 +1,6 @@
 "use server";
 
 export const registerUser = async () => {
-  const res = await fetch(`http://localhost:5000/api/v1/register`);
+  const res = await fetch(`${process.env.BACKEND_URL}/api/v1/register`);
   return;
 };
