@@ -3,6 +3,7 @@ import { loginUser } from "@/utils/actions/loginUser";
 import { signIn } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 
 type FormValues = {
@@ -16,6 +17,7 @@ const LoginPage = () => {
     handleSubmit,
     formState: { errors },
   } = useForm<FormValues>();
+  const router = useRouter();
 
   const onSubmit = async (data: FormValues) => {
     try {
@@ -23,6 +25,7 @@ const LoginPage = () => {
 
       if (res.success) {
         alert(res.message);
+        router.push("/dashboard");
       }
     } catch (err: any) {
       console.error(err.message);
