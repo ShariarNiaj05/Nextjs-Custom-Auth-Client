@@ -2,7 +2,15 @@
 import { signOut } from "next-auth/react";
 import Link from "next/link";
 
-const Navbar = ({ session }) => {
+type UserProps = {
+  user: {
+    name: string;
+    email: string;
+
+    image: string;
+  };
+};
+const Navbar = ({ session }: { session: UserProps }) => {
   return (
     <div className="navbar bg-base-100  border-b  w-[90%] mx-auto">
       <div className="navbar-start">
