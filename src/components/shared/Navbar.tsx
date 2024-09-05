@@ -70,7 +70,7 @@ const Navbar = ({ session }: { session: UserProps | null }) => {
       <div className="navbar-end">
         {session?.user ? (
           <button
-            onClick={() => signOut(session)}
+            onClick={() => signOut()}
             className="btn btn-error btn-outline text-white rounded-full px-5"
           >
             Logout
