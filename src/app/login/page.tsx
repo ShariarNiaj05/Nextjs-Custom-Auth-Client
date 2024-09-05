@@ -80,6 +80,11 @@ const LoginPage = () => {
           <div className="flex justify-center mb-10 mt-2">
             <button className="btn btn-circle ">
               <Image
+                onClick={() =>
+                  signIn("google", {
+                    callbackUrl: "http://localhost:3000/dashboard",
+                  })
+                }
                 src="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-webinar-optimizing-for-success-google-business-webinar-13.png"
                 width={50}
                 height={50}
