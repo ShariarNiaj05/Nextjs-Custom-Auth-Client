@@ -3,11 +3,10 @@ import { signOut } from "next-auth/react";
 import Link from "next/link";
 
 type UserProps = {
-  user: {
-    name: string;
-    email: string;
-
-    image: string;
+  user?: {
+    name?: string;
+    email?: string;
+    image?: string;
   };
 };
 const Navbar = ({ session }: { session: UserProps }) => {
