@@ -23,9 +23,10 @@ const LoginPage = () => {
     try {
       const res = await loginUser(data);
       console.log(res);
-      if (res.success) {
+      if (res.accessToken) {
         alert(res.message);
-        router.push("/dashboard");
+        localStorage.setItem("accessToken", res.accessToken);
+        router.push("/");
       }
     } catch (err: any) {
       console.error(err.message);
