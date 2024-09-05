@@ -96,7 +96,8 @@ const LoginPage = () => {
               <Image
                 onClick={() =>
                   signIn("google", {
-                    callbackUrl: "http://localhost:3000/dashboard",
+                    callbackUrl:
+                      "https://nextjs-custom-auth-client-three.vercel.app/dashboard",
                   })
                 }
                 src="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-webinar-optimizing-for-success-google-business-webinar-13.png"
@@ -109,7 +110,8 @@ const LoginPage = () => {
               className="btn btn-circle"
               onClick={() =>
                 signIn("github", {
-                  callbackUrl: "http://localhost:3000/dashboard",
+                  callbackUrl:
+                    "https://nextjs-custom-auth-client-three.vercel.app/dashboard",
                 })
               }
             >
