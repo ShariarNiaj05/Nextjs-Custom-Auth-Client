@@ -22,7 +22,7 @@ const LoginPage = () => {
   const onSubmit = async (data: FormValues) => {
     try {
       const res = await loginUser(data);
-
+      console.log(res);
       if (res.success) {
         alert(res.message);
         router.push("/dashboard");
